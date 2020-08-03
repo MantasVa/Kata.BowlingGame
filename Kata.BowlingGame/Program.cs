@@ -6,7 +6,9 @@ namespace Kata.BowlingGame
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            string input = "xxxxxxxxxxxx";
+            BowlingScoreCalculator calculator = new BowlingScoreCalculator(input);
+            Console.WriteLine(calculator.CalculateScore());
         }
     }
 }
