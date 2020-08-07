@@ -8,7 +8,7 @@ namespace Kata.BowlingGame
         Spare,
         Strike
     }
-    public class BowlingScoreCalculator 
+    public class BowlingScoreCalculator
     {
         private ushort _score = 0;
         private Node _currentNode = null;
@@ -21,7 +21,7 @@ namespace Kata.BowlingGame
         }
 
         public ushort CalculateScore()
-        {           
+        {
             ushort frameCount = 0;
             while (frameCount != 10)
             {
@@ -62,12 +62,7 @@ namespace Kata.BowlingGame
                     numberValue = 10;
                 }
 
-                Node node = new Node()
-                {
-                    Value = numberValue,
-                    Type = type,
-                    PrevNode = prevNode,
-                };
+                Node node = new Node(numberValue, type, prevNode);
 
                 if (prevNode != null)
                 {
